@@ -40,12 +40,14 @@ To tackle the complexity of legal judgment prediction, we integrate powerful tec
 ## 📊 Evaluation Metrics and Dataset Characteristics
 
 ### 🔍 Dataset Characteristics:
+
 This dataset contains:
 - **183 Criminal Law Articles** and **202 Charges**, covering a wide range of legal scenarios for training and testing.
 - **Imbalanced Categories:** With certain charges being more frequent, it presents an exciting challenge for models to handle rare cases as effectively as the common ones.
 
 ### 🔗 Interdependencies:
 The beauty of this task lies in the interconnectedness of:
+<img src="https://github.com/fatma2123456/CAIL2018-Judgment-Prediction/blob/main/images%20for%20CAIL2018-Judgment/unnamed%20(10).png" alt="Dataset Characteristics Image" style="width:100%; max-width:600px; display:block; margin: 20px auto;">
 - **Law Articles**
 - **Charges**
 - **Prison Terms**
@@ -55,7 +57,7 @@ Each piece influences the others, and predicting one requires understanding how 
 ---
 
 ## 🏗 Dataset Construction
-
+<img src="https://github.com/fatma2123456/CAIL2018-Judgment-Prediction/blob/main/images%20for%20CAIL2018-Judgment/unnamed%20(11).png" alt="Dataset Characteristics Image" style="width:100%; max-width:600px; display:block; margin: 20px auto;">
 ### 📝 Data Source:
 The **CAIL2018 dataset** is carefully constructed from **5,730,302 criminal documents** pulled from **China Judgment Online**.
 
