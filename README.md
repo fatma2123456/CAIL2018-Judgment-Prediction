@@ -4,7 +4,6 @@
 
 Imagine a world where **AI and law** come together to create a justice system that is faster, fairer, and more accurate. This is the vision behind the **CAIL2018 dataset** — an incredible step forward in **Legal Judgment Prediction (LJP)** that harnesses the power of **NLP** and **legal knowledge** to predict law articles, charges, and prison terms based on case facts.
 
-> "A world where justice is swift, informed, and data-driven is not just a dream—it's a possibility!"
 
 ### 🚧 Challenges
 - **Imbalanced Data:** With the top 10 charges covering **79%** of all cases, the challenge is steep. But it's a challenge worth taking!
