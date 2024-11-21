@@ -112,9 +112,11 @@ The table below explains how each method processes input and works to predict le
 For a better understanding of how these methods perform on the CAIL2018 dataset, refer to the following image of the results:
 
 <img src="https://github.com/fatma2123456/CAIL2018-Judgment-Prediction/blob/main/images%20for%20CAIL2018-Judgment/unnamed%20(14).png" alt="Dataset Characteristics Image" style="width:100%; max-width:600px; display:block; margin: 20px auto;">
+
 ---
 
 ## 🚀 SEMDR Model for Legal Judgment Prediction
+<img src="https://github.com/fatma2123456/CAIL2018-Judgment-Prediction/blob/main/images%20for%20CAIL2018-Judgment/image%20(1).png" alt="Dataset Characteristics Image" style="width:100%; max-width:600px; display:block; margin: 20px auto;">
 
 ### 🌍 Overview:
 The **Semantic-Aware Dual Encoder Model (SEMDR)** goes beyond surface-level predictions by addressing subtle differences between crimes, handling rare cases, and improving the semantic representation of key facts.
@@ -138,10 +140,31 @@ The **Semantic-Aware Dual Encoder Model (SEMDR)** goes beyond surface-level pred
 ---
 
 ## 🏆 Results
+<img src="https://github.com/fatma2123456/CAIL2018-Judgment-Prediction/blob/main/images%20for%20CAIL2018-Judgment/unnamed%20(15).png" alt="Dataset Characteristics Image" style="width:100%; max-width:600px; display:block; margin: 20px auto;">
 
 ### 🎯 Performance:
-- **SEMDR** outperforms **BERT** with an **87.60%** accuracy for robbery predictions compared to just **30.12%** with BERT. That’s an impressive leap forward!
-- **Attention Weights:** SEMDR’s attention mechanism focuses on key legal terms like "rob" and "cash," improving its ability to distinguish between similar charges and make accurate predictions.
+##### Legal Charge Prediction Comparison - SEMDR vs BERT
+<img src="https://github.com/fatma2123456/CAIL2018-Judgment-Prediction/blob/main/images%20for%20CAIL2018-Judgment/unnamed%20(17).png" alt="Dataset Characteristics Image" style="width:100%; max-width:600px; display:block; margin: 20px auto;">
+
+This section compares **SEMDR** and **BERT with Graph Reasoning** for legal charge prediction, including accuracy and attention weights on criminal keywords.
+###### (A) Comparison of Legal Charge Prediction Probability
+<img src="https://github.com/fatma2123456/CAIL2018-Judgment-Prediction/blob/main/images%20for%20CAIL2018-Judgment/unnamed%20(16).png" alt="Dataset Characteristics Image" style="width:100%; max-width:600px; display:block; margin: 20px auto;">
+
+| **Aspect**                                         | **SEMDR**                                                                                             | **BERT w/ Graph Reasoning**                                                                            |
+|----------------------------------------------------|-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| **Accuracy on Robbery**                            | 87.60% accuracy in predicting Robbery.                                                                 | 30.12% accuracy in predicting Robbery.                                                                 |
+| **Prediction Confusion**                           | Correctly predicts Robbery, fewer misclassifications.                                                   | Tends to confuse Robbery with Theft and Fraud more often.                                              |
+| **Model Strengths**                                | Focuses on accurate charge classification for Robbery.                                                 | Struggles with distinguishing between charges like Theft and Fraud.                                   |
+
+
+###### (B) Graph Attention Weights on Criminal Keywords
+<img src="https://github.com/fatma2123456/CAIL2018-Judgment-Prediction/blob/main/images%20for%20CAIL2018-Judgment/image.png" alt="Dataset Characteristics Image" style="width:100%; max-width:600px; display:block; margin: 20px auto;">
+
+
+| **Model**                      | **Graph Attention Weights**                                                                         | **Keywords with High Attention**                                            |
+|---------------------------------|-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
+| **SEMDR**                       | Assigns high attention to relevant keywords, focusing on important clues for charge prediction.      | "rob," "cash" for Robbery; "insurance" for Fraud.                           |
+| **BERT w/ Graph Reasoning**     | Uses graph-based reasoning but doesn't focus as sharply on relevant keywords.                        | Tends to assign attention to less relevant words, causing confusion.        |
 
 ---
 
