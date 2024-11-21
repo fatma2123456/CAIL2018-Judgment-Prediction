@@ -58,6 +58,7 @@ Each piece influences the others, and predicting one requires understanding how 
 
 ## 🏗 Dataset Construction
 <img src="https://github.com/fatma2123456/CAIL2018-Judgment-Prediction/blob/main/images%20for%20CAIL2018-Judgment/unnamed%20(11).png" alt="Dataset Characteristics Image" style="width:100%; max-width:600px; display:block; margin: 20px auto;">
+
 ### 📝 Data Source:
 The **CAIL2018 dataset** is carefully constructed from **5,730,302 criminal documents** pulled from **China Judgment Online**.
 
@@ -68,6 +69,8 @@ The **CAIL2018 dataset** is carefully constructed from **5,730,302 criminal docu
 ---
 
 ## 🔍 Approaches to Legal Judgment Prediction
+
+<img src="https://github.com/fatma2123456/CAIL2018-Judgment-Prediction/blob/main/images%20for%20CAIL2018-Judgment/image%20(3).png" alt="Dataset Characteristics Image" style="width:100%; max-width:600px; display:block; margin: 20px auto;">
 
 ### Approach 1: Deep Learning Text Classification Models
 - **Description:** AI directly predicts judgment outcomes from case facts. It’s like giving the model a case and asking for its verdict.
@@ -88,15 +91,13 @@ The **CAIL2018 dataset** is carefully constructed from **5,730,302 criminal docu
 
 ## 🧠 Models and Techniques
 
-### Legal Syllogism Prompting (LoT):
-- **Dataset:** CAIL2018
-- **Method:** LoT uses structured prompts to guide the model through the deductive reasoning process.
-- **Improvement:** This method enhances reasoning and judgment prediction, creating a more explainable and interpretable model.
 
-### Zero-shot Chain of Thought (Zero-shot CoT):
-- **Dataset:** CAIL2018
-- **Method:** Simple prompts like "Let’s think step by step" help improve reasoning.
-- **Impact:** It enhances judgment prediction accuracy, improving upon random and majority baselines.
+| **Model**                     | **Dataset**              | **Method**                                                                                           | **Accuracy**                                                               | **Challenges/Notes**                                                                                                                                                     |
+|-------------------------------|--------------------------|------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **1. Baseline GPT-3 Model**    | CAIL2018 (Second-stage test set) | GPT-3 model used directly for charge prediction. No additional reasoning or guidance applied.          | ~30% accuracy on charge prediction                                           | Struggles with high-frequency charges like "dangerous driving." Misunderstands charges involving multiple behaviors (e.g., drunk driving, overloading).                    |
+| **2. Legal Syllogism Prompting (LoT)** | CAIL2018               | Guided through a legal syllogism framework (major premise, minor premise, conclusion).                | Improves reasoning and judgment prediction compared to baseline model        | LoT improves charge prediction by guiding the model through structured legal reasoning, fixing misinterpretation issues in the baseline.                                  |
+| **3. Zero-shot Chain of Thought (Zero-shot CoT)** | CAIL2018               | "Let’s think step by step" prompt to improve reasoning ability.                                        | Improves judgment prediction over random and majority baselines             | Encourages step-by-step reasoning but does not specify accuracy numbers. Shows improvement over random and majority predictions.                                          |
+
 
 ---
 
